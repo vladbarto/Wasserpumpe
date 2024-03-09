@@ -1,0 +1,10 @@
+{
+    "C_Cpp.debugShortcut": false,
+    "C_Cpp.vcpkg.enabled": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "files.associations": {
+        "sam3xa.h": "c",
+        "sam3x8e.h": "c"
+    },
+    "python.analysis.typeCheckingMode": "basic",
+}

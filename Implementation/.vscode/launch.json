@@ -1,0 +1,106 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gdb (local)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/${input:Aufgabe}",
+            "miDebuggerServerAddress": "localhost:3333",
+            "useExtendedRemote": true,
+            "cwd": "${workspaceRoot}",
+            "MIMode": "gdb",
+            "targetArchitecture": "arm",
+            "svdPath": "../Atmel.SAM3X_DFP.1.0.50/svd/ATSAM3X8E.svd",
+            "miDebuggerPath": "arm-none-eabi-gdb",
+            "internalConsoleOptions": "neverOpen",
+            "postRemoteConnectCommands": [
+                {
+                    "text": "load"
+                }
+            ],
+            "preLaunchTask": "${input:Aufgabe}"
+        },
+        {
+            "name": "gdb (remote)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/${input:Aufgabe}",
+            "miDebuggerServerAddress": "141.100.52.${input:Arbeitsplatz}:3333",
+            "useExtendedRemote": true,
+            "cwd": "${workspaceRoot}",
+            "MIMode": "gdb",
+            "targetArchitecture": "arm",
+            "svdPath": "../Atmel.SAM3X_DFP.1.0.50/svd/ATSAM3X8E.svd",
+            "miDebuggerPath": "arm-none-eabi-gdb",
+            "internalConsoleOptions": "neverOpen",
+            "postRemoteConnectCommands": [
+                {
+                    "text": "load"
+                }
+            ],
+            "preLaunchTask": "${input:Aufgabe}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "Aufgabe",
+            "type": "pickString",
+            "description": "W\u00e4hle die ELF Datei der Aufgabe aus, welche Debugged werden soll.",
+            "options": [
+                {
+                    "label": "main.c",
+                    "value": "build/main.elf"
+                }
+            ]
+        },
+        {
+            "id": "Arbeitsplatz",
+            "type": "pickString",
+            "description": "W\u00e4hle den zu debuggenden Arbeitsplatz aus.",
+            "default": "1",
+            "options": [
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "1"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "2"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "3"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "4"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "5"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "6"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "7"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "8"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "9"
+                },
+                {
+                    "label": "Arbeitsplatz",
+                    "value": "10"
+                }
+            ]
+        }
+    ]
+}

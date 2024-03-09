@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "command": "make",
+    "type": "shell",
+    "problemMatcher": [
+        "$gcc"
+    ],
+    "presentation": {
+        "reveal": "silent"
+    },
+    "tasks": [
+        {
+            "label": "OpenOCD",
+            "detail": "Startet OpenOCD in einem Terminal.",
+            "args": [
+                "openocd"
+            ],
+            "promptOnClose": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "Clean",
+            "detail": "Loescht den 'build' Ordner.",
+            "args": [
+                "clean"
+            ]
+        },
+        {
+            "label": "build/main.elf",
+            "detail": "Kompiliert main.c",
+            "args": [
+                "build/main.elf"
+            ]
+        }
+    ]
+}
