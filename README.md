@@ -32,7 +32,8 @@ are the two strings' frequencies), we were able to find out the mass in real tim
 ### Keyboard vs Numeric Pad
 An elegant solution in our system is the use of Keyboard for twe two possible commands:
 - key C - for calibrating (measuring the mass of the empty cup);
-- key P - for pumping (starting the system); by default, the system pumps 25 grams (hardcoded value).    
+- key P - for pumping (starting the system); by default, the system pumps 25 grams (hardcoded value).
+    
 The user interface waits for our key, so it takes advantage of Serial Comunication.
 If we had chosen to use the Numeric Pad (indicated in the picture) and implicitly make use of 
 Interrupt Handling, the physical action of pushing a button would send a wave in the
