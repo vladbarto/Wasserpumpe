@@ -24,14 +24,15 @@ the water filling process and also to send an Input from Keyboard to control the
 
 ### Scale
 The scale system implies two strings: one stretched and one compressed. By using them
-in combination with Timer Component - Capture Mode, and a simple formula:
-![Mass formula](./Media/mass%20formula.png), (where `c1 = 17942`, `c2 = 40` are the system constants and the f's 
+in combination with Timer Component - Capture Mode, and a simple formula:  
+![Mass formula](./Media/mass%20formula.png),   
+(where `c1 = 17942`, `c2 = 40` are the system constants and the f's 
 are the two strings' frequencies), we were able to find out the mass in real time.
 
 ### Keyboard vs Numeric Pad
 An elegant solution in our system is the use of Keyboard for twe two possible commands:
 - key C - for calibrating (measuring the mass of the empty cup);
-- key P - for pumping (starting the system); by default, the system pumps 25 grams (hardcoded value).  
+- key P - for pumping (starting the system); by default, the system pumps 25 grams (hardcoded value).    
 The user interface waits for our key, so it takes advantage of Serial Comunication.
 If we had chosen to use the Numeric Pad (indicated in the picture) and implicitly make use of 
 Interrupt Handling, the physical action of pushing a button would send a wave in the
